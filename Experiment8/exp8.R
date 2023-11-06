@@ -3,7 +3,6 @@ install.packages("caret")
 install.packages("ggplot2")
 install.packages("randomForest")
 
-
 library(mlbench)
 library(caret)
 library(randomForest)
@@ -44,7 +43,6 @@ predictions <- predict(model, newdata = testing_data)
 predictions
 predictions <- as.factor(predictions)
 testing_data$Class<-as.factor(testing_data$Class)
-
 typeof(testing_data$Class)
 typeof(predictions)
 

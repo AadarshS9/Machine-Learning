@@ -31,3 +31,11 @@ cm <- table(test_cl$Species, classifier_knn)
 cm 
 
 confusionMatrix(classifier_knn,test_cl$Species)
+
+#K = 5
+classifier_knn <- knn(train = train_scale,test = test_scale,cl = train_cl$Species,k = 5)
+classifier_knn
+misClassError <- mean(classifier_knn != test_cl$Species) 
+print(paste('Accuracy =', 1-misClassError)) 
+
+confusionMatrix(classifier_knn,test_cl$Species)
